@@ -9,6 +9,7 @@ require('./config/database');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const coursesRouter = require('./routes/courses');
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/courses', coursesRouter);
 
 app.use(function(req, res) {
   res.status(404).send('/error')
