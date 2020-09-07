@@ -1,14 +1,14 @@
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
-const session = require('express-morgan');
+const session = require('express-session');
 const passport = require('passport');
 
 require('dotenv').config();
 require('./config/database');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const usersRouter = require('./routes/user');
 const coursesRouter = require('./routes/courses');
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(express.urlencoded({
   extended: false
 }))
 app.use(express.static(path.join(__dirname, 'public')))
-app.session(session({
+app.use(session({
   secret: 'Caddie',
   resave: false,
   saveUninitalized: true
