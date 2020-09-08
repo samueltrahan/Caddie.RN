@@ -1,4 +1,5 @@
 import React from 'react'
+import './Navbar.css'
 
 
 const Navbar = ({user, handleLogout}) => {
@@ -18,8 +19,8 @@ const Navbar = ({user, handleLogout}) => {
   <nav>
     <div className="nav-wrapper">
       <ul id="nav-mobile" className="right">
-        <li><a href=" " className="nav-link">Login</a></li>
-        <li><a href=" " className="nav-link">Sign In</a></li>
+        <li><a href="/login" className="nav-link">Login</a></li>
+        <li><a href="/signup" className="nav-link">Sign Up</a></li>
       </ul>
     </div>
   </nav>
