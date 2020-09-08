@@ -6,6 +6,7 @@ const NavBar = ({ user, handleLogout }) => {
         <nav>
             <div className="nav-wrapper">
                 <ul id="nav-mobile" className="right">
+                    <li><a href="/courses" className="nav-link">Search Courses</a></li>
                     <li><a href=" " className="nav-link">Welcome, {user.name}</a></li>
                     <li><a href=" " className="nav-link" onClick={handleLogout}>Log Out</a></li>
                 </ul>
