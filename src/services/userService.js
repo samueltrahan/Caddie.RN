@@ -1,0 +1,16 @@
+const BASE_URL = "google/auth";
+import tokenService from './tokenService'
+
+function signup(user) {
+  return fetch(BASE_URL + "signup", {
+    method: "POST",
+    headers: new Headers({ "Content-type": "application/json" }),
+    body: JSON.stringify(user),
+  }).then((res) => {
+    if (res.ok) return res.json();
+    throw new Error("Email already taken!");
+  })
+  .then(({token}) => {
+    tokenService.setToken(token)
+  })
+}
