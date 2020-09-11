@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react'
+import SearchBar from './components/SearchBar'
 
-const App = () => {
+export default function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [cities, setCities] = useState([]);
+
+
   return (
     <div>
-      Hello World
+      <SearchBar />
     </div>
   )
 }
 
-export default App
