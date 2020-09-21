@@ -1,21 +1,23 @@
 import React, {useState} from 'react'
 import SearchBar from './components/SearchBar'
 import NavBar from './components/NavBar'
+import axios from 'axios'
 
 
-const key = process.env.REACT_APP_API
+const key = process.env.REACT_APP_API_KEY
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [cities, setCities] = useState([]);
 
   const onInputChange = (event) => {
-    const input = {searchTerm: event.target.value}
-    setSearchTerm({input})
+    setSearchTerm({searchTerm: event.target.value})
   }
 
   const getCity = async () => {
-    const response = await fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${searchTerm}&key=${key}`)
+    const response = await axios.create(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${searchTerm}&key=${key}`)
+    const data = await response.json()
+    console.log(data)
   }
 
   const handleSearchSubmit = async (event) => {
@@ -29,7 +31,7 @@ export default function App() {
     <>
     <NavBar />
     <div>
-      <SearchBar />
+      <SearchBar term={searchTerm} handleSearchSubmit={handleSearchSubmit} onInputChange={onInputChange}/>
     </div>
     </>
   )

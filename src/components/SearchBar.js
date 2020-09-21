@@ -1,15 +1,15 @@
 import React from 'react'
 import './SearchBar.css'
 
-const SearchBar = () => {
+const SearchBar = ({term, handleSearchSubmit, onInputChange}) => {
   return (
     <>
       <div>
       <div className="ui form">
         <div>
-          <form className="field" >
+          <form className="field" onSubmit={handleSearchSubmit} >
             <label>Search City</label>
-            <input className="input" type="text" />
+            <input  onChange={onInputChange} className="input" type="text" />
             <button className="ui button" type="submit">Search</button>
           </form>
         </div>
