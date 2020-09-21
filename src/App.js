@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import SearchBar from './components/SearchBar'
+import NavBar from './components/NavBar'
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -7,9 +8,12 @@ export default function App() {
 
 
   return (
+    <>
+    <NavBar />
     <div>
       <SearchBar />
     </div>
+    </>
   )
 }
 
