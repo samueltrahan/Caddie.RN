@@ -6,3 +6,7 @@ label {
   display: flexbox;
   text-align: center;
 }
+
+button {
+  color: gold;
+}

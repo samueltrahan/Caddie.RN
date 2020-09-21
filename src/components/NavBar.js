@@ -20,6 +20,7 @@ const NavBar = () => {
       <div className="nav-wrapper">
         <ul className="right">
           <li><a>Search Courses</a></li>
+          <li><a>Favorite Courses</a></li>
         </ul>
       </div>
     </nav>

@@ -10,7 +10,7 @@ const SearchBar = () => {
           <form className="field" >
             <label>Search City</label>
             <input className="input" type="text" />
-            <button className="ui green button" type="submit">Search</button>
+            <button className="ui button" type="submit">Search</button>
           </form>
         </div>
       </div>
