@@ -8,11 +8,9 @@ const key = process.env.REACT_APP_API_KEY
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [cities, setCities] = useState([]);
+  const [courses, setCourses] = useState([]);
 
-  const onInputChange = (event) => {
-    setSearchTerm({searchTerm: event.target.value})
-  }
+
 
   const getCity = async () => {
     const response = await axios.create(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${searchTerm}&key=${key}`)
@@ -24,6 +22,7 @@ export default function App() {
     event.preventDefault();
     const city = await getCity(searchTerm);
     console.log(city)
+    setSearchTerm({searchTerm: event.target.value})
   }
 
 
@@ -31,7 +30,7 @@ export default function App() {
     <>
     <NavBar />
     <div>
-      <SearchBar term={searchTerm} handleSearchSubmit={handleSearchSubmit} onInputChange={onInputChange}/>
+      <SearchBar term={searchTerm} handleSearchSubmit={handleSearchSubmit}/>
     </div>
     </>
   )
