@@ -7,7 +7,9 @@ const key = process.env.REACT_APP_API_KEY
 
 
 app.get('/', (req, res) => {
-  res.send(axios.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${searchTerm}&key=${key}`))
+  res.send(axios.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${req.body.term}&key=${key}`))
+  .then(response => {res.json(response)})
+  .catch(err => console.log(err))
 })
 
 app.listen(port, () => {
