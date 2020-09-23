@@ -8,19 +8,23 @@ export default function App() {
 
   const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
+    
     axios
       .get("/courses", {
         params: {
-          searchTerm: searchTerm
-        }
+          searchTerm: searchTerm,
+        },
       })
-      .then((response) => setCourses(response.data));
+      .then((response) => {
+        setCourses(response.data.results);
+      })
+      .catch(err => console.log(err))
   };
 
   return (
     <>
       <NavBar />
-    {console.log(courses)}
+      {console.log(courses)}
       <div>
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
       </div>
