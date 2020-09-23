@@ -7,7 +7,7 @@ const SearchBar = ({ handleSearchSubmit}) => {
 
   const onInputChange = (event) => {
     console.log(event.target.value)
-    setSearchTerm({searchTerm: event.target.value})
+    setSearchTerm(event.target.value)
   }
 
   return (
