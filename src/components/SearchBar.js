@@ -2,11 +2,9 @@ import React, {useState} from 'react'
 import './SearchBar.css'
 
 const SearchBar = ({ handleSearchSubmit}) => {
-
   const [searchTerm, setSearchTerm] = useState('')
 
   const onInputChange = (event) => {
-    console.log(event.target.value)
     setSearchTerm(event.target.value)
   }
 
@@ -15,7 +13,7 @@ const SearchBar = ({ handleSearchSubmit}) => {
       <div>
       <div className="ui form">
         <div>
-          <form className="field" onSubmit={handleSearchSubmit} >
+          <form className="field" onSubmit={(event) => handleSearchSubmit(event, searchTerm)} >
             <label>Search City</label>
             <input value={searchTerm} onChange={onInputChange} className="input" type="text" />
             <button className="ui button" type="submit">Search</button>

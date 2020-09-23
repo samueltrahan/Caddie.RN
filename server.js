@@ -2,13 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3001
 const axios = require('axios')
+require('dotenv').config()
+const bodyParser = require('body-parser')
 
-const key = process.env.REACT_APP_API_KEY
 
+const key = process.env.API_KEY
 
-app.get('/', (req, res) => {
-  res.send(axios.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${req.body.term}&key=${key}`))
-  .then(response => {res.json(response)})
+app.post('/courses', (req, res) => {
+  console.log(req + '!!!!!!')
+  axios.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${req.body.searchTerm}&key=${key}`)
+  .then(response => {res.send(response)})
   .catch(err => console.log(err))
 })
 

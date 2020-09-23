@@ -1,30 +1,29 @@
-import React, {useState} from 'react'
-import SearchBar from './components/SearchBar'
-import NavBar from './components/NavBar'
-import axios from 'axios'
-
+import React, { useState, useEffect } from "react";
+import SearchBar from "./components/SearchBar";
+import NavBar from "./components/NavBar";
+import axios from "axios";
 
 export default function App() {
-  const [searchTerm, setSearchTerm] = useState('');
   const [courses, setCourses] = useState([]);
 
-
-
-
-
-  const handleSearchSubmit = async (event) => {
+  const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
-    // const city = await getCity();
-  }
-
+    axios
+      .post("/courses", {
+        data: {
+          searchTerm: searchTerm,
+        },
+      })
+      .then((response) => setCourses(response.data));
+  };
 
   return (
     <>
-    <NavBar />
-    <div>
-      <SearchBar term={searchTerm} handleSearchSubmit={handleSearchSubmit}/>
-    </div>
+      <NavBar />
+    {console.log(courses)}
+      <div>
+        <SearchBar handleSearchSubmit={handleSearchSubmit} />
+      </div>
     </>
-  )
+  );
 }
-
