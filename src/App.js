@@ -9,10 +9,10 @@ export default function App() {
   const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
     axios
-      .post("/courses", {
-        data: {
-          searchTerm: searchTerm,
-        },
+      .get("/courses", {
+        params: {
+          searchTerm: searchTerm
+        }
       })
       .then((response) => setCourses(response.data));
   };
