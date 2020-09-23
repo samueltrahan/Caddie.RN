@@ -13,16 +13,15 @@ export default function App() {
 
 
   const getCity = async () => {
-    const response = await axios.create(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${searchTerm}&key=${key}`)
+    const response = await axios.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=golf+courses+${searchTerm}&key=${key}`)
     const data = await response.json()
     console.log(data)
   }
 
   const handleSearchSubmit = async (event) => {
     event.preventDefault();
-    const city = await getCity(searchTerm);
+    const city = await getCity();
     console.log(city)
-    setSearchTerm({searchTerm: event.target.value})
   }
 
 
