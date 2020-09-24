@@ -15,7 +15,7 @@ const SearchBar = ({ handleSearchSubmit}) => {
         <div>
           <form className="field" onSubmit={(event) => handleSearchSubmit(event, searchTerm)} >
             <label>Search City</label>
-            <input value={searchTerm} onChange={onInputChange} className="input" type="text" />
+            <input id="input" value={searchTerm} onChange={onInputChange} className="input" type="text" /><br />
             <button className="ui button" type="submit">Search</button>
           </form>
         </div>

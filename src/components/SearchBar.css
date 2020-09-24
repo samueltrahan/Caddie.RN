@@ -10,3 +10,8 @@ label {
 button {
   color: gold;
 }
+
+#input {
+  width: 500px;
+  height: 20px;
+}
