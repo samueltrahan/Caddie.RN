@@ -25,7 +25,6 @@ export default function App() {
   return (
     <>
       <NavBar />
-      {console.log(courses)}
       <div>
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
       </div>
