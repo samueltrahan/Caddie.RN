@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
-import Courses from './components/Courses'
+import Courses from "./components/Courses";
 import axios from "axios";
+import "./App.css";
 
 export default function App() {
   const [courses, setCourses] = useState([]);
 
   const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
-    
+
     axios
       .get("/courses", {
         params: {
@@ -19,7 +20,7 @@ export default function App() {
       .then((response) => {
         setCourses(response.data.results);
       })
-      .catch(err => console.log(err))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -29,7 +30,7 @@ export default function App() {
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
       </div>
       <div>
-        <Courses courses={courses}/>
+        <Courses courses={courses} />
       </div>
     </>
   );
