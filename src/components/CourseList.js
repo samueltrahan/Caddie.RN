@@ -6,8 +6,8 @@ const CourseList = ({course}) => {
     <>
     <div className="course-list">
       <ul>
-      <li>{course.name}</li>
-      <li>{course.formatted_address}</li>
+      <li className="course-name">{course.name}</li>
+      <li className="course-address">{course.formatted_address}</li>
       </ul>
     </div>
     </>
