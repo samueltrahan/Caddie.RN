@@ -23,8 +23,13 @@ export default function App() {
       .catch((err) => console.log(err));
   };
 
+  const getCourseDetails = async (event) => {
+    
+  }
+
   return (
     <>
+    {console.log(courses)}
       <NavBar />
       <div>
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
