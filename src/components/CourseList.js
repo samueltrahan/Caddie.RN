@@ -1,14 +1,16 @@
 import React from "react";
 import "./CourseList.css";
 
-const CourseList = ({ course }) => {
+const CourseList = ({ course, getCourseDetails }) => {
+
+  const courseId = course.place_id;
   return (
     <>
       <div className="course-list">
         <ul>
           <li className="course-name">{course.name}</li>
           <li className="course-address">{course.formatted_address}</li>
-          <button id="detail-btn" className="ui inverted gold button">Course Details</button>
+          <button onClick={(event) => getCourseDetails(event, courseId)} id="detail-btn" className="ui inverted gold button">Course Details</button>
         </ul>
       </div>
     </>

@@ -17,6 +17,18 @@ app.get("/courses", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.get('/details', (req, res) => {
+  console.log(req.query.courseId + '!!!!!')
+  axios.get(
+    `https://maps.googleapis.com/maps/api/place/details/json?place_id=${req.query.courseId}&key=${key}`
+  )
+  .then((response) => {
+    console.log(response.data)
+    res.send(response.data);
+  })
+  .catch((err) => console.log(err))
+})
+
 app.listen(port, () => {
   console.log(`Listening on ${port}`);
 });
