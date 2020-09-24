@@ -8,7 +8,7 @@ const CourseList = ({ course }) => {
         <ul>
           <li className="course-name">{course.name}</li>
           <li className="course-address">{course.formatted_address}</li>
-          <button>Course Details</button>
+          <button id="detail-btn" className="ui inverted gold button">Course Details</button>
         </ul>
       </div>
     </>

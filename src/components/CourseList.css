@@ -14,3 +14,12 @@
   color: white;
   text-shadow: 1px 1px 1px black;
 }
+
+#detail-btn {
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+#detail-btn:hover {
+  color: grey;
+}
