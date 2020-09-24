@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
+import Courses from './components/Courses'
 import axios from "axios";
 
 export default function App() {
@@ -27,6 +28,9 @@ export default function App() {
       {console.log(courses)}
       <div>
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
+      </div>
+      <div>
+        <Courses courses={courses}/>
       </div>
     </>
   );
