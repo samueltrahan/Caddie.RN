@@ -18,7 +18,6 @@ app.get("/courses", (req, res) => {
 });
 
 app.get('/details', (req, res) => {
-  console.log(req.query.courseId + '!!!!!')
   axios.get(
     `https://maps.googleapis.com/maps/api/place/details/json?place_id=${req.query.courseId}&key=${key}`
   )

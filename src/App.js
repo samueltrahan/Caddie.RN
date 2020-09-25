@@ -3,6 +3,8 @@ import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
 import Courses from "./components/Courses";
 import axios from "axios";
+import { Route } from 'react-router-dom';
+import CourseDetails from './components/CourseDetails'
 import "./App.css";
 
 export default function App() {
@@ -32,7 +34,8 @@ export default function App() {
       },
     })
     .then((response) => {
-      setCourseDetails(response.data.results)
+      console.log(response.data.result)
+      setCourseDetails(response.data.result)
     })
     .catch((err) => console.log(err));
   }
@@ -46,6 +49,9 @@ export default function App() {
       <div>
         <Courses courses={courses} getCourseDetails={getCourseDetails} />
       </div>
+      <Route exact path='/details' render={() =>
+        <CourseDetails />
+      } />
     </>
   );
 }
