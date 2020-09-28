@@ -1,7 +1,8 @@
 import React from "react";
 import "./CourseList.css";
+import {Link} from 'react-router-dom'
 
-const CourseList = ({ course, getCourseDetails }) => {
+const CourseList = ({ course }) => {
 
   const courseId = course.place_id;
   return (
@@ -10,7 +11,7 @@ const CourseList = ({ course, getCourseDetails }) => {
         <ul>
           <li className="course-name">{course.name}</li>
           <li className="course-address">{course.formatted_address}</li>
-          <button onClick={(event) => getCourseDetails(event, courseId)} id="detail-btn" className="ui inverted gold button">Course Details</button>
+          <Link to={`/course-details/${courseId}`}  id="detail-btn" className="ui inverted gold button">Course Details</Link>
         </ul>
       </div>
     </>

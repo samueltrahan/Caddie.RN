@@ -3,13 +3,14 @@ import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
 import Courses from "./components/Courses";
 import axios from "axios";
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 import CourseDetails from './components/CourseDetails'
 import "./App.css";
 
 export default function App() {
   const [courses, setCourses] = useState([]);
-  const [courseDetails, setCourseDetails] = useState([])
+  
 
   const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
@@ -26,32 +27,18 @@ export default function App() {
       .catch((err) => console.log(err));
   };
 
-  const getCourseDetails = async (event, courseId) => {
-    event.preventDefault();
-    axios.get('/details', {
-      params: {
-        courseId: courseId,
-      },
-    })
-    .then((response) => {
-      console.log(response.data.result)
-      setCourseDetails(response.data.result)
-    })
-    .catch((err) => console.log(err));
-  }
+ 
 
   return (
-    <>
+    <Router>
       <NavBar />
-      <div>
+      <Route exact path="/">
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
-      </div>
-      <div>
-        <Courses courses={courses} getCourseDetails={getCourseDetails} />
-      </div>
-      <Route exact path='/details' render={() =>
+        <Courses courses={courses}  />
+      </Route>
+      <Route  path='/course-details/:id' render={() =>
         <CourseDetails />
       } />
-    </>
+    </Router>
   );
 }
