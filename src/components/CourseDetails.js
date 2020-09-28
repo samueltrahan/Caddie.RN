@@ -37,7 +37,7 @@ const CourseDetails = () => {
         </h1>
         <h2 className="course-address">{courseDetails.formatted_address}</h2>
         <h2 className="course-phone">{courseDetails.formatted_phone_number}</h2>
-        <h3>Course Rating: {courseDetails.rating}</h3>
+        <h3 className="course-rating">Course Rating: {courseDetails.rating}</h3>
       </div>
     </>
   );
