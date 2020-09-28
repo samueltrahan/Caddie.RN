@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import './CourseDetails.css'
 
 const CourseDetails = () => {
   const [courseDetails, setCourseDetails] = useState({});
@@ -24,18 +25,18 @@ const CourseDetails = () => {
 
   console.log(courseDetails);
 
-  // const reviews = courseDetails.reviews.map((review) => {
-  //   return review
+  // const reviews = courseDetails.photos.map((photo) => {
+  //   return photo
   // })
 
   return (
     <>
       <div>
-        <h1>
+        <h1 className="course-name">
           <a href={courseDetails.website}>{courseDetails.name}</a>
         </h1>
-        <h2>{courseDetails.formatted_address}</h2>
-        <h2>{courseDetails.formatted_phone_number}</h2>
+        <h2 className="course-address">{courseDetails.formatted_address}</h2>
+        <h2 className="course-phone">{courseDetails.formatted_phone_number}</h2>
         <h3>Course Rating: {courseDetails.rating}</h3>
       </div>
     </>

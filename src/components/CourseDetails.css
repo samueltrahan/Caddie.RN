@@ -1,0 +1,14 @@
+.course-name {
+  text-align: center;
+  color: white;
+}
+
+.course-address {
+  text-align: center;
+}
+
+.course-phone {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
