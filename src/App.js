@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "./components/SearchBar";
-import NavBar from "./components/NavBar";
-import Courses from "./components/Courses";
+import SearchBar from "./components/NavSearch/SearchBar";
+import NavBar from "./components/NavSearch/NavBar";
+import Courses from "./components/CourseDisplay/Courses";
 import axios from "axios";
 import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router } from "react-router-dom";
-import CourseDetails from './components/CourseDetails'
+import CourseDetails from './components/CourseDetails/CourseDetails'
 import "./App.css";
 
 export default function App() {
