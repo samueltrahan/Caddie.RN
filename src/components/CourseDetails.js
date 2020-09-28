@@ -5,6 +5,7 @@ import './CourseDetails.css'
 
 const CourseDetails = () => {
   const [courseDetails, setCourseDetails] = useState({});
+  const [reviews, setReviews] = useState([])
   const { id } = useParams();
 
   useEffect(() => {
@@ -15,19 +16,18 @@ const CourseDetails = () => {
             courseId: courseId,
           },
         })
-        .then((response) => {
+        .then(function(response) {
           setCourseDetails(response.data.result);
+          setReviews(response.data.result.reviews)
         })
         .catch((err) => console.log(err));
-    };
-    getCourseDetails(id);
-  }, [id]);
+      };
+      getCourseDetails(id);
+    }, [id]);
+    
+console.log(courseDetails)
 
-  console.log(courseDetails);
-
-  // const reviews = courseDetails.photos.map((photo) => {
-  //   return photo
-  // })
+  
 
   return (
     <>
@@ -38,6 +38,7 @@ const CourseDetails = () => {
         <h2 className="course-address">{courseDetails.formatted_address}</h2>
         <h2 className="course-phone">{courseDetails.formatted_phone_number}</h2>
         <h3 className="course-rating">Course Rating: {courseDetails.rating}</h3>
+  
       </div>
     </>
   );
