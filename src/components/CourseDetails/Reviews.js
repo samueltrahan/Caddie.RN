@@ -6,6 +6,7 @@ const Reviews = ({ reviews }) => {
     <>
       <h1 className="review-header">Reviews</h1>
       {reviews.map((review) => (
+        <div className="review-cards">
         <div className="row">
           <div className="col s12 m6">
             <div className="card blue-grey darken-1">
@@ -16,6 +17,7 @@ const Reviews = ({ reviews }) => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       ))}
     </>
