@@ -12,7 +12,7 @@ const CourseDetails = () => {
   useEffect(() => {
     const getCourseDetails = async (courseId) => {
       axios
-        .get("/details", {
+        .get("/api/details", {
           params: {
             courseId: courseId,
           },

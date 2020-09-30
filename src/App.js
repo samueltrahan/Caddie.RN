@@ -16,7 +16,7 @@ export default function App() {
     event.preventDefault();
 
     axios
-      .get("/courses", {
+      .get("/api/courses", {
         params: {
           searchTerm: searchTerm,
         },
