@@ -32,15 +32,15 @@ console.log(courseDetails)
 
   return (
     <>
-      <div>
+      <div className="details">
         <h1 className="course-name">
           <a href={courseDetails.website}>{courseDetails.name}</a>
         </h1>
         <h2 className="course-address">{courseDetails.formatted_address}</h2>
         <a href="tel:{courseDetails.formatted_phone_number}" className="course-phone">{courseDetails.formatted_phone_number}</a>
         <h3 className="course-rating">Course Rating: {courseDetails.rating}</h3>
-        <Reviews reviews={reviews}/>
       </div>
+        <Reviews reviews={reviews}/>
     </>
   );
 };
