@@ -33,10 +33,12 @@ export default function App() {
   return (
     <Router>
       <NavBar />
+      <div className="background">
       <Route exact path="/" render={() =>
         <LandingPage /> 
       }>
       </Route>
+      </div>
       <Route exact path="/search">
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
         <Courses courses={courses}  />

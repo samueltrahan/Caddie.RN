@@ -1,0 +1,15 @@
+
+
+.caddie-landing {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+.caddie-heading {
+  font-size: 100px;
+  color: gold;
+  text-shadow: 5px 5px 5px black;
+}
