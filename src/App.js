@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./components/NavSearch/SearchBar";
+import LandingPage from './components/LandingPage';
 import NavBar from "./components/NavSearch/NavBar";
 import Courses from "./components/CourseDisplay/Courses";
 import axios from "axios";
@@ -32,7 +33,10 @@ export default function App() {
   return (
     <Router>
       <NavBar />
-      <Route exact path="/">
+      <Route path="/">
+        <LandingPage /> 
+      </Route>
+      <Route exact path="/search">
         <SearchBar handleSearchSubmit={handleSearchSubmit} />
         <Courses courses={courses}  />
       </Route>
