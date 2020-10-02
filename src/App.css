@@ -2,10 +2,3 @@ body {
   background-color: cornflowerblue;
 }
 
-.background {
-  background: url(/images/caddie-page.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
