@@ -10,7 +10,7 @@ const SearchBar = ({ handleSearchSubmit}) => {
 
   return (
     <>
-      <div>
+      <div className="search-bar">
       <div className="ui form">
         <div>
           <form className="field" onSubmit={(event) => handleSearchSubmit(event, searchTerm)} >
