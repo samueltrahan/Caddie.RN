@@ -1,22 +1,31 @@
 import React from 'react'
-import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
+import {GoogleMap, useLoadScript, Marker, InfoWindow} from '@react-google-maps/api'
 
-function Map() {
-return (
-  <GoogleMap defaultZoom={10} defaultCenter={{lat: 45.421532, lng: -75.697189}}/>
-  ) 
+const libraries = 'places'
+const mapContainerStyle = {
+  width: '100vw',
+  height: '100vh'
+}
+const center = {
+  lat: 30.2672,
+  lng: -97.7431
 }
 
-const WrappedMap = withScriptjs(withGoogleMap(Map))
-
 export default function GoogleMaps() {
+  const {isLoaded, loadError} = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_API_KEY,
+    libraries,
+  });
+
+  if(loadError) return 'Error loading maps'
+  if(isLoaded) return 'Loading Maps';
+
+
+
+
   return (
-    <div style={{width: '100vw', height: '100vh'}}>
-      <WrappedMap googleMapURL={`https://maps.googleapis.come/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_API_KEY}`}
-      loadingElement={<div style={{height: "100%"}}/>}
-      containerElement={<div style={{height: "100%"}}/>}
-      mapElement={<div style={{height: "100%"}}/>}
-      />
+    <div>
+        <GoogleMap mapContainerStyle={mapContainerStyle} zoom={8} center={center} ></GoogleMap>
     </div>
   )
 }

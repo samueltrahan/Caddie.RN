@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import './CourseDetails.css'
 import Reviews from './Reviews'
+import GoogleMaps from '../GoogleMaps/GoogleMaps'
 
 const CourseDetails = () => {
   const [courseDetails, setCourseDetails] = useState({});
@@ -40,6 +41,7 @@ console.log(courseDetails)
         <a href="tel:{courseDetails.formatted_phone_number}" className="course-phone">{courseDetails.formatted_phone_number}</a>
         <h3 className="course-rating">Course Rating: {courseDetails.rating}</h3>
       </div>
+      <GoogleMaps />
         <Reviews reviews={reviews}/>
     </>
   );
