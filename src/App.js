@@ -42,7 +42,7 @@ export default function App() {
         <Courses courses={courses}  />
       </Route>
       <Route  path='/course-details/:id' render={() =>
-        <CourseDetails />
+        <CourseDetails courses={courses}/>
       } />
     </Router>
   );

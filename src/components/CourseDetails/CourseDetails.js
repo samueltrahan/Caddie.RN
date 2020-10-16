@@ -9,6 +9,8 @@ const CourseDetails = () => {
   const [courseDetails, setCourseDetails] = useState({});
   const [reviews, setReviews] = useState([])
   const { id } = useParams();
+  const [lat, setLat] = useState('');
+  const [lng, setLng] = useState('');
 
   useEffect(() => {
     const getCourseDetails = async (courseId) => {
@@ -20,6 +22,8 @@ const CourseDetails = () => {
         })
         .then(function(response) {
           setCourseDetails(response.data.result);
+          setLat(response.data.result.geometry.location.lat);
+          setLng(response.data.result.geometry.location.lng)
           setReviews(response.data.result.reviews)
         })
         .catch((err) => console.log(err));
@@ -28,6 +32,8 @@ const CourseDetails = () => {
     }, [id]);
     
 console.log(courseDetails)
+
+
 
   
 
@@ -41,7 +47,7 @@ console.log(courseDetails)
         <a href="tel:{courseDetails.formatted_phone_number}" className="course-phone">{courseDetails.formatted_phone_number}</a>
         <h3 className="course-rating">Course Rating: {courseDetails.rating}</h3>
       </div>
-      <GoogleMaps />
+      <GoogleMaps lat={lat} lng={lng}/>
         <Reviews reviews={reviews}/>
     </>
   );
