@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const key = process.env.API_KEY;
+const key = process.env.REACT_APP_API_KEY;
 
 function getDetails(req, res) {
   axios.get(
