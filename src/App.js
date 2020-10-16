@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import SearchBar from "./components/NavSearch/SearchBar";
 import LandingPage from './components/LandingPage/LandingPage';
 import NavBar from "./components/NavSearch/NavBar";
 import Courses from "./components/CourseDisplay/Courses";
 import axios from "axios";
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import CourseDetails from './components/CourseDetails/CourseDetails'
 import "./App.css";
