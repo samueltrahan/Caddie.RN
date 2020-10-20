@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](public/images/caddie-heading.png)
 
-## Available Scripts
+Date: 10/20/20
 
-In the project directory, you can run:
+### [LinkedIn](hhtps://linkedin.com/in/samueltrahan/)
 
-### `yarn start`
+## Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Caddie a React application made to search for golf courses around the world. You can get access to details about specific golf courses and set up tee times.  This application is using Vercel's serverless functions.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This app is deployed using Vercel and can be found [here](https://caddie-golf.com/)
+ ---
 
-### `yarn test`
+ ## Getting Started
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Click the search courses link and search the globe for a golf course. You can type in a city or a zip code and you will be give a list of golf courses based on that search term. 
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Future Improvements
+- [ ] Build a backend so that users can save golf courses that they have played
+- [ ] Implement authentication into the app
+- [ ] Build a scoring system into the app so that users can keep track of scores and see what other users have scored on the same golf courses.
+- [ ] Find pictures of the golf courses
+- [ ] Find course lay outs to give more details about the courses
+- [ ] On the map on the course details page add a cursor so that users can see exactly where the course is located.
+ ---
+  
+  ## Credits
+  Google Places API <br />
+  Google Places Details API <br />
+  Google Maps Javascript API <br />
