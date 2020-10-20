@@ -2,7 +2,7 @@
 
 Date: 10/20/20
 
-### [LinkedIn](hhtps://linkedin.com/in/samueltrahan/)
+### [LinkedIn](https://linkedin.com/in/samueltrahan/)
 
 ## Description
 
