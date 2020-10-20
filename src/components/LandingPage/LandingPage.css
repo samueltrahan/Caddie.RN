@@ -1,0 +1,21 @@
+
+
+.caddie-landing {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(/images/caddie-page.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.caddie-heading {
+  font-family: 'Righteous', cursive;
+  font-size: 150px;
+  color: gold;
+  text-shadow: 5px 5px 5px black;
+}

@@ -9,7 +9,7 @@
   color: white;
 }
 
-.course-address {
+.course-detail-address {
   text-align: center;
   text-shadow: 2px 2px 2px black;
   font-size: 30px;
@@ -17,7 +17,6 @@
 
 .course-phone {
   text-align: center;
-  font-size: 30px;
   color: white;
   text-shadow: 2px 2px 2px black;
 }
@@ -25,5 +24,11 @@
 .course-rating {
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 2px black
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 20px;
+}
+
+.tee-time {
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }

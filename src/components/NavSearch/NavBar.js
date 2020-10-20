@@ -18,9 +18,10 @@ const NavBar = () => {
     <>
     <nav>
       <div className="nav-wrapper">
+          <a  href='/'><img className="logo" alt="" src="/images/caddie.rn.logo.png"></img></a>
         <ul className="right">
-          <li><a href='/'>Search Courses</a></li>
-          <li><a>Favorite Courses</a></li>
+          <li><a href='/search'>Search Courses</a></li>
+          {/* <li><a>Favorite Courses</a></li> */}
         </ul>
       </div>
     </nav>
