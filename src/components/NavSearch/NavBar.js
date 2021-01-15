@@ -18,11 +18,12 @@ const NavBar = () => {
     <>
     <nav>
       <div className="nav-wrapper">
-          <a  href='/'><img className="logo" alt="" src="/images/caddie.rn.logo.png"></img></a>
-        <ul className="right">
-          <li><a href='/search'>Search Courses</a></li>
-          {/* <li><a>Favorite Courses</a></li> */}
-        </ul>
+        <div className="golf-bag">
+          <a  href='/'><img className="logo" alt="" src="/images/golf-ball-logo.png"></img></a>
+        </div>
+        <div className="search-courses">
+          <a className="search" href="/search">Search for Courses</a>
+        </div>
       </div>
     </nav>
     </>
