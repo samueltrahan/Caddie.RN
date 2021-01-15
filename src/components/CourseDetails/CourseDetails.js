@@ -46,7 +46,7 @@ console.log(courseDetails)
         <h2 className="course-address">{courseDetails.formatted_address}</h2>
         <a href="tel:{courseDetails.formatted_phone_number}" className="course-phone">{courseDetails.formatted_phone_number}</a>
         <h3 ><a className="tee-time" href={courseDetails.website}>Schedule a Tee Time</a></h3>
-        <h3 className="course-rating">Course Rating: {courseDetails.rating}</h3>
+        <h3 className="course-rating">Course Rating: {courseDetails.rating} / 5 </h3>
       </div>
       <GoogleMaps lat={lat} lng={lng}/>
         <Reviews reviews={reviews}/>
