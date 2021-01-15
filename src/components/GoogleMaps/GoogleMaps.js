@@ -8,7 +8,7 @@ export default function GoogleMaps({lat, lng}) {
   function Map() {
     return (
       <GoogleMap 
-      defaultZoom={19}
+      defaultZoom={17}
       defaultCenter={{
         lat: lat,
         lng: lng
